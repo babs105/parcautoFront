@@ -1,0 +1,451 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
+@import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
+
+* {
+  margin: 0;
+}
+body {
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+.text-primary-p {
+  color: #a5aaad;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.text-title {
+  color: #2e4a66;
+}
+
+.text-lightblue {
+  color: #469cac;
+}
+
+.text-red {
+  color: #cc3d38;
+}
+
+.text-yellow {
+  color: #a98921;
+}
+
+.text-green {
+  color: #3b9668;
+}
+.container {
+  display: flex;
+  position: relative;
+}
+.containerRight {
+  flex: 9;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 10px;
+  width: 90%;
+  /* height: 80%; */
+  border: 1px solid gray;
+  border-radius: 8px;
+  /* box-shadow: 1px 1px 5px grey; */
+}
+.inputFormRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 50%;
+}
+
+.buttonForm {
+  font-size: medium;
+  margin: 30px;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  width: 190px;
+  cursor: pointer;
+  background-color: #4e9f3d;
+}
+.buttonForm:active {
+  background-color: red;
+}
+.buttonForm:disabled {
+  background-color: rgb(204, 199, 199);
+}
+
+.titleForm {
+  text-align: center;
+  font-size: x-large;
+  font-weight: bold;
+  color: rgb(63, 62, 62);
+  margin: 20px 0;
+}
+.commande {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  width: 280px;
+}
+.inputRowContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* width: 100%; */
+}
+
+.quantiteInput {
+  height: 30px;
+  margin: 10px 10px 0px 0px;
+  border-radius: 5px;
+  border: 1px solid gray;
+}
+.pieceInputForm {
+  height: 35px;
+  margin: 10px 10px 0px 0px;
+  border-radius: 5px;
+  border: 1px solid gray;
+  width: 280px;
+}
+
+.buttonAddList {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 32px;
+  border-radius: 5px;
+  color: #ffffff;
+  background-color: #4e9f3d;
+  cursor: pointer;
+}
+.buttonAddList:active {
+  background-color: rgb(236, 74, 4);
+  cursor: pointer;
+}
+.buttonWrapper {
+  display: flex;
+  width: 280px;
+  justify-content: flex-end;
+  background-color: rgb(236, 74, 4);
+}
+.inputError {
+  font-size: 12px;
+  padding: 3px;
+  color: red;
+  display: none;
+}
+
+.quantiteInput:invalid[focused="true"] {
+  border: 1px solid red;
+}
+
+.quantiteInput:invalid[focused="true"] ~ span {
+  display: block;
+}
+
+.pieceInputForm:invalid[focused="true"] {
+  border: 1px solid red;
+}
+
+.pieceInputForm:invalid[focused="true"] ~ span {
+  display: block;
+}
+/* table */
+
+.tableTitle {
+  margin-top: 25px;
+}
+.styled-table {
+  border-collapse: collapse;
+  margin: 10px 0;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  min-width: 400px;
+  /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.15); */
+}
+.styled-table thead tr {
+  background-color: #1e5128;
+  color: #ffffff;
+  text-align: left;
+}
+.styled-table th,
+.styled-table td {
+  padding: 12px 15px;
+}
+.styled-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+  border-bottom: 2px solid #4e9f3d;
+}
+.styled-table tbody tr.active-row {
+  font-weight: bold;
+  color: #1e5128;
+}
+.delItem,
+.pdfItem {
+  color: red;
+  cursor: pointer;
+}
+.editItem {
+  color: gray;
+  cursor: pointer;
+}
+.buttonActionTab {
+  border-radius: 5px;
+  padding: 5px;
+  border: 1px solid #4e9f3d;
+  color: #46b85d;
+  cursor: pointer;
+  background-color: white;
+}
+.buttonActionTab:hover {
+  border-radius: 5px;
+  padding: 5px;
+  border: 1px solid #4e9f3d;
+  color: white;
+  cursor: pointer;
+  background-color: #4e9f3d;
+}
+/* fin table */
+
+.navigationStep {
+  display: flex;
+  justify-content: space-between;
+  /* margin: 5px; */
+  width: 100%;
+  height: 50px;
+  background-color: gray;
+}
+.nextStepLinkBloc,
+.prevStepLinkBloc {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: bold;
+}
+.prevStepLink,
+.nextStepLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 13px;
+  background-color: #4bb543;
+  color: white;
+  cursor: pointer;
+}
+.noDecorLink {
+  color: white;
+  text-decoration: none;
+}
+.topAction {
+  height: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* border-bottom: 1px solid gray;
+  background-color: gray; */
+}
+.topActionleft {
+  margin-left: 50px;
+}
+.topActionRight {
+  margin-left: 10px;
+}
+.topActionButton {
+  background-color: #4e9f3d;
+  font-size: medium;
+  color: white;
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.topActionRight {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 10px;
+  margin-right: 10px;
+  height: 30px;
+  background-color: rgb(211, 203, 203);
+}
+.searchInput {
+  border: none;
+  width: 250px;
+  background-color: rgb(211, 203, 203);
+}
+.searchInput:focus {
+  outline: none;
+}
+.actionTable {
+  display: flex;
+  justify-content: space-between;
+}
+.nextStepButton {
+}
+.listDiagContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.tableContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  width: 90%;
+}
+
+.formInputSelect {
+  display: flex;
+  flex-direction: column;
+  width: 210px;
+}
+
+.inputSelectForm {
+  height: 33px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid gray;
+}
+.formInput {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.labelInput {
+  font-size: 14px;
+  color: gray;
+}
+.inputForm {
+  height: 25px;
+  padding: 5px;
+  margin: 5px 0px;
+  border: 0;
+  border-radius: 4px;
+  border: 1px solid gray;
+  width: 200px;
+}
+
+.inputForm:invalid[focused="true"],
+.inputSelectForm:invalid[focused="true"] {
+  border: 1px solid red;
+}
+
+.inputForm:invalid[focused="true"] ~ span,
+.inputSelectForm:invalid[focused="true"] ~ span {
+  display: block;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #3ea175;
+}
+.sideBarWrapper {
+  padding: 10px 0 0 20px;
+}
+.menuList {
+  padding: 0;
+  margin: 10px 0 0 0px;
+  list-style: none;
+}
+.menuItem {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+.menuLink {
+  text-decoration: none;
+  color: #a5aaad;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* .menuLink:active {
+  text-decoration: underline;
+  color: green;
+} */
+.menuLinkActive {
+  /* text-decoration: none; */
+  font-weight: bold;
+  padding: 10px;
+  background: rgba(62, 161, 117, 0.3);
+  color: #3ea175;
+  border-radius: 3px;
+}
+
+/* pagination */
+.cp-pagination {
+  margin: 0 15px auto;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  outline: none;
+}
+.cp-pagination > .cp-active > a {
+  background-color: #4bb543;
+  border-color: #4bb543;
+  color: #fff !important;
+}
+.cp-pagination > li > a {
+  border: 1px solid #4bb543;
+  padding: 5px 10px;
+  outline: none;
+  cursor: pointer;
+}
+.cp-pagination > .cp-active > a,
+.cp-pagination > .cp-active > span,
+.cp-pagination > .cp-active > a:hover,
+.cp-pagination > .cp-active > span:hover,
+.cp-pagination > .cp-active > a:focus,
+.cp-pagination > .cp-active > span:focus {
+  background-color: #4e9f3d;
+  border-color: #4e9f3d;
+  outline: none;
+}
+.cp-pagination > li > a,
+.cp-pagination > li > span {
+  color: #4bb543;
+}
+.cp-pagination > li:first-child > a,
+.cp-pagination > li:first-child > span,
+.cp-pagination > li:last-child > a,
+.cp-pagination > li:last-child > span {
+  border-radius: unset;
+}

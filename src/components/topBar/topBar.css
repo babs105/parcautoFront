@@ -1,0 +1,55 @@
+.topBar {
+  display: flex;
+  position: sticky;
+  top: 0;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  height: 50px;
+  background-color: white;
+  border-bottom: 1px solid lightgray;
+}
+.topBarLeft {
+  flex: 2;
+  padding-left: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.topBar_NavIcon {
+  display: none;
+}
+.topBarCenter {
+  flex: 6;
+  width: 100%;
+  height: 25px;
+  border-radius: 10px;
+  padding: 2px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.topBarRight {
+  flex: 5;
+  display: flex;
+  padding: 0 10px;
+  justify-content: flex-end;
+  align-items: center;
+}
+.logo {
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+  margin-left: 20px;
+}
+@media only screen and (max-width: 978px) {
+  .topBar_NavIcon {
+    display: inline;
+    color: gray;
+  }
+}
+/* @media only screen and (max-width: 480px) {
+  .navbar__left {
+    display: none;
+  }
+} */
