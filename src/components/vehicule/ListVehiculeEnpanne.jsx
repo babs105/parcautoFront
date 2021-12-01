@@ -95,17 +95,7 @@ function ListVehiculeEnpanne() {
                             Intervenir
                           </button>
                         </Link>
-                    {/* <span className="pdfItem">
-                      <PDFDownloadLink
-                        document={<DiagnosticPdf data={diagnostic} />}
-                        style={{ color: "red" }}
-                        fileName="Diagnostic.pdf"
-                      >
-                        {({ url, loading, error }) =>
-                          loading ? "..." : <PictureAsPdfIcon />
-                        }
-                      </PDFDownloadLink>
-                    </span> */}
+                 
                   </td>
                 </tr>
               ) }
