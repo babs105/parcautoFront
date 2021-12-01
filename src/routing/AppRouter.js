@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useEffect } from "react";
 import {
   BrowserRouter as Router,
   Route,
@@ -11,7 +11,7 @@ import { StateProvider } from "../context/StateContext";
 
 // import Login from "../page/LoginForm";
 // import { Alert } from "../components/alert/Alert";
-import history from "../utils/history";
+
 import LoginForm from "../pages/LoginForm";
 // import { TableListProvider } from "../context/TableListContext";
 // import { UserContext, UserProvider } from "../context/UserContext";

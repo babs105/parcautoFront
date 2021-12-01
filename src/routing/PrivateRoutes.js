@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React from "react";
 import { Route, Switch } from "react-router-dom";
 import CommandeModule from "../components/commande/CommandeModule";
 import DashboardModule from "../components/dashboard/DashboardModule";
@@ -46,16 +46,6 @@ const PrivateRoutes = (props) => {
             <Route path="/defaut" component={DefautModule} />
             <Route path="/reparation" component={ReparationModule} />
             <Route path="/dashboard" component={DashboardModule} />
-
-            {/*   <Route path="/cuve" component={CuveModule} />
-          <Route path="/cuve-principale" component={CuvePrincipaleModule} />
-
-          <Route path="/forage" component={ForageModule} />
-          <Route path="/dashboard" component={DashbordModule} />
-          <Route path="/rapports" component={RapportModule} />
-          <Route path="/profile" component={Profile} />
-
-          <Route component={NotFound} /> */}
           </Switch>
         </div>
       </div>
